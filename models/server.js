@@ -7,7 +7,7 @@ class Server{
     constructor(){
         this.usuariosPath='/api/usuarios'
         this.app = express();
-        this.puerto=process.env.PORT;
+        this.puerto=process.env.PORT || 8080;
         this.middlewares();
         this.routes();  // este método configura las rutas
         this.listen();
